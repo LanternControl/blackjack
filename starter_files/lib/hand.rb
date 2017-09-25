@@ -11,7 +11,7 @@ require_relative "deck"
   end
 
   def deal
-    # maybe add in some input
+    puts "Here is your opening hand"
     2.times{deal_card(@player_hand)}
     2.times{deal_card(@dealer_hand)}
   end
