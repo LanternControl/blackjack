@@ -21,3 +21,5 @@ class Deck
   def shuffle
     @cards.shuffle
   end
+
+end

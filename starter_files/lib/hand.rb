@@ -1,7 +1,7 @@
 require_relative "deck"
 
   class Hand
-    attr_accessor :player_cards, :dealer_cards
+    attr_accessor :player_hand, :dealer_hand
 
   def initialize
     @player_hand = []
@@ -30,7 +30,7 @@ require_relative "deck"
     end
   end
 
-  def get_total(cards)
+  def hand_score(cards)
       @card_values = cards.map { |card| card.rank  }
       @card_values.map! { |value| (value === :J || value === :Q || value === :K ? 10 : value) }
       if @card_values.include?(:A)
